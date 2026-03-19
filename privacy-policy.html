@@ -3,123 +3,415 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Safe Pulse Privacy Policy</title>
+  <title>Safe Path — Privacy Policy</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #333;
-      line-height: 1.6;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1 { color: #00B050; }
-    h2 { color: #00B050; margin-top: 30px; }
-    a { color: #00B050; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f4f9f4;
+      color: #2d2d2d;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #00B050;
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 16px;
+      background-color: white;
+      color: #00B050;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .meta-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 32px;
+      border-left: 5px solid #00B050;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .meta-card .meta-item label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .meta-card .meta-item span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2d2d2d;
+    }
+
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      transition: box-shadow 0.2s;
+    }
+
+    .section:hover {
+      box-shadow: 0 4px 20px rgba(0,176,80,0.1);
+    }
+
+    .section-number {
+      display: inline-block;
+      background-color: #00B050;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      margin-right: 10px;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #00B050;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .section h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2d2d2d;
+      margin: 20px 0 10px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 12px;
+    }
+
+    .section ul {
+      padding-left: 0;
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .section ul li {
+      font-size: 15px;
+      color: #444;
+      padding: 8px 0 8px 28px;
+      position: relative;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .section ul li:last-child {
+      border-bottom: none;
+    }
+
+    .section ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #00B050;
+      font-weight: 700;
+    }
+
+    .section ul li strong {
+      color: #2d2d2d;
+    }
+
+    .highlight-box {
+      background-color: #f0faf4;
+      border: 1px solid #c8ecd6;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #2d6a45;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #00B050, #007a38);
+      border-radius: 16px;
+      padding: 32px 36px;
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-card h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      font-size: 15px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: white;
+      color: #00B050;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .contact-card a:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #aaa;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    footer span {
+      color: #00B050;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 24px; }
+      .meta-card { grid-template-columns: 1fr; }
+      .section { padding: 24px 20px; }
+      .contact-card { padding: 24px 20px; }
+    }
   </style>
 </head>
 <body>
 
-<h1>Privacy Policy</h1>
-<p><strong>Effective Date:</strong> March 13, 2026</p>
-<p><strong>App Name:</strong> Safe Pulse</p>
-<p><strong>Company:</strong> Njeze Technologies</p>
-<p><strong>Contact Email:</strong> safepath@gmail.com</p>
+<header>
+  <h1>🛡️ Safe Path</h1>
+  <p>Your family's safety, always.</p>
+  <div class="badge">Privacy Policy</div>
+</header>
 
-<h2>1. Introduction</h2>
-<p>Welcome to Safe Pulse, operated by Njeze Technologies. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application Safe Pulse. By using Safe Pulse, you agree to the collection and use of information in accordance with this policy.</p>
+<div class="container">
 
-<h2>2. Who We Are</h2>
-<p>Safe Pulse is a family safety and location tracking application designed to help families stay connected and safe. Safe Pulse is developed and operated by Njeze Technologies, an independent software developer based in Nigeria. We are committed to complying with the Nigeria Data Protection Act (NDPA) 2023 and applicable data protection laws.</p>
+  <div class="meta-card">
+    <div class="meta-item">
+      <label>Effective Date</label>
+      <span>March 13, 2026</span>
+    </div>
+    <div class="meta-item">
+      <label>Last Updated</label>
+      <span>March 13, 2026</span>
+    </div>
+    <div class="meta-item">
+      <label>App Name</label>
+      <span>Safe Path</span>
+    </div>
+    <div class="meta-item">
+      <label>Company</label>
+      <span>Njeze Technologies</span>
+    </div>
+    <div class="meta-item">
+      <label>Contact</label>
+      <span>safepath@gmail.com</span>
+    </div>
+    <div class="meta-item">
+      <label>Country</label>
+      <span>Nigeria</span>
+    </div>
+  </div>
 
-<h2>3. Minimum Age</h2>
-<p>Safe Pulse is intended for users who are <strong>18 years of age or older</strong>. By using the app, you confirm that you are at least 18 years old. We do not knowingly collect personal information from anyone under 18. If we discover that a user is under 18, we will immediately delete their account and all associated data.</p>
+  <div class="section">
+    <h2><span class="section-number">1</span> Introduction</h2>
+    <p>Welcome to Safe Path, a product of Njeze Technologies. We take your privacy seriously and are committed to being transparent about how we handle your personal information. This Privacy Policy describes what data we collect, why we collect it, and how we protect it when you use our mobile application.</p>
+    <p>By downloading or using Safe Path, you agree to the terms of this Privacy Policy. If you do not agree, we kindly ask that you do not use the app.</p>
+  </div>
 
-<h2>4. Information We Collect</h2>
-<p><strong>Information You Provide:</strong></p>
-<ul>
-  <li>Full name — used to identify you within your family group</li>
-  <li>Email address — used for account creation and login</li>
-  <li>Secret code — stored locally on your device only, never sent to our servers</li>
-</ul>
-<p><strong>Information We Collect Automatically:</strong></p>
-<ul>
-  <li>Location data (GPS) — collected at intervals you choose while tracking is active</li>
-  <li>Device information — basic device data collected by Firebase for app functionality</li>
-</ul>
-<p><strong>Information We Do NOT Collect:</strong></p>
-<ul>
-  <li>We do not collect payment card details — all payments are processed securely by Paystack</li>
-  <li>We do not collect contacts, photos, or any data unrelated to app functionality</li>
-  <li>We do not run advertising or analytics tracking</li>
-</ul>
+  <div class="section">
+    <h2><span class="section-number">2</span> Who We Are</h2>
+    <p>Safe Path is a family safety and location tracking application built to help families stay connected and protect one another. The app is developed and operated by Njeze Technologies, an independent software development company based in Nigeria. We are committed to full compliance with the Nigeria Data Protection Act (NDPA) 2023 and all other applicable data protection regulations.</p>
+  </div>
 
-<h2>5. How We Use Your Information</h2>
-<p>We use your information strictly to:</p>
-<ul>
-  <li>Provide location tracking and family safety features</li>
-  <li>Display your location history to your approved family members</li>
-  <li>Send family invites and manage family groups</li>
-  <li>Process premium subscription payments via Paystack</li>
-  <li>Maintain and improve the app</li>
-</ul>
-<p>We do <strong>not</strong> use your data for advertising, profiling, or any purpose beyond what is stated above.</p>
+  <div class="section">
+    <h2><span class="section-number">3</span> Minimum Age</h2>
+    <p>Safe Path is designed for users who are 13 years of age or older. Any user between the ages of 13 and 17 is required to obtain the consent of a parent or legal guardian before using the app.</p>
+    <p>By creating an account, you confirm that you are at least 13 years old and, if under 18, that you have received the necessary parental or guardian approval.</p>
+    <p>We do not knowingly collect personal information from children under the age of 13. Should we become aware that a user is below this age threshold, we will promptly delete their account and all associated data without notice.</p>
+    <div class="highlight-box">
+      Parents or guardians who suspect their child under 13 has registered an account are encouraged to contact us at safepath@gmail.com. We will investigate and respond within 7 days.
+    </div>
+  </div>
 
-<h2>6. Location Data</h2>
-<p>Location data is the core of Safe Pulse. Here is exactly how we handle it:</p>
-<ul>
-  <li>Location is only collected when you actively enable tracking</li>
-  <li>Your location is only visible to family members you have explicitly invited and accepted</li>
-  <li>Location history is automatically deleted after 24 hours for free users and 30 days for premium users</li>
-  <li>You can stop tracking at any time from within the app</li>
-  <li>No one outside your approved family group can see your location</li>
-</ul>
+  <div class="section">
+    <h2><span class="section-number">4</span> Information We Collect</h2>
 
-<h2>7. Data Sharing</h2>
-<p>We do not sell, trade, or rent your personal data to any third party. Your data is only shared in the following limited circumstances:</p>
-<ul>
-  <li><strong>Within your family group</strong> — location data is visible only to family members you have explicitly invited and accepted</li>
-  <li><strong>Firebase/Google</strong> — we use Google Firebase for secure data storage and authentication</li>
-  <li><strong>Paystack</strong> — payment processing only. Paystack handles all card data and we never see or store your payment details</li>
-  <li><strong>Legal requirements</strong> — we may disclose data if required by Nigerian law or valid legal process</li>
-</ul>
+    <h3>4.1 Information You Provide Directly</h3>
+    <ul>
+      <li><strong>Full name</strong> — used to identify you within your family group</li>
+      <li><strong>Email address</strong> — used for account creation, login and communication</li>
+      <li><strong>Secret disguise code</strong> — stored entirely on your device and never transmitted to our servers</li>
+    </ul>
 
-<h2>8. Data Retention</h2>
-<ul>
-  <li><strong>Free users:</strong> Location history is automatically deleted after 24 hours</li>
-  <li><strong>Premium users:</strong> Location history is automatically deleted after 30 days</li>
-  <li><strong>Account data:</strong> Retained until you delete your account</li>
-  <li><strong>After account deletion:</strong> All your data is permanently deleted from our servers within 7 days</li>
-</ul>
+    <h3>4.2 Information Collected Automatically</h3>
+    <ul>
+      <li><strong>GPS location data</strong> — captured at intervals you personally select, only while tracking is actively enabled</li>
+      <li><strong>Device information</strong> — device model, operating system version, app version and timezone, collected by Firebase solely to support app functionality</li>
+    </ul>
 
-<h2>9. Data Security</h2>
-<p>We take the security of your data seriously. All data is stored on Google Firebase with strict security rules. No user can access another user's data without explicit permission. Payment data is handled entirely by Paystack. Your disguise secret code is stored only on your device. However, no method of transmission over the internet is 100% secure.</p>
+    <h3>4.3 Information We Do Not Collect</h3>
+    <ul>
+      <li><strong>Payment card details</strong> — all transactions are processed by Paystack. We only receive a transaction reference to confirm payment</li>
+      <li><strong>Contacts, photos or camera data</strong> — we do not access anything outside the scope of this app</li>
+      <li><strong>Advertising or analytics data</strong> — we currently do not engage in third party tracking. If this changes, this policy will be updated</li>
+    </ul>
+  </div>
 
-<h2>10. Your Rights Under NDPA 2023</h2>
-<ul>
-  <li><strong>Right to access</strong> — request a copy of your personal data</li>
-  <li><strong>Right to correction</strong> — update your personal information</li>
-  <li><strong>Right to deletion</strong> — delete your account from within the app, or email us at safepath@gmail.com and we will process your request within 7 days</li>
-  <li><strong>Right to withdraw consent</strong> — stop location tracking at any time</li>
-</ul>
+  <div class="section">
+    <h2><span class="section-number">5</span> How We Use Your Information</h2>
+    <p>The information we collect is used exclusively to deliver the services Safe Path was built for:</p>
+    <ul>
+      <li>Provide real-time location tracking and family safety features</li>
+      <li>Make your location history available to family members you have approved</li>
+      <li>Facilitate family invitations and group management</li>
+      <li>Process your premium subscription payments through Paystack</li>
+      <li>Maintain, improve and troubleshoot the app</li>
+    </ul>
+    <div class="highlight-box">
+      We do not use your personal data for advertising, behavioural profiling or any purpose not listed above.
+    </div>
+  </div>
 
-<h2>11. Disguise Feature</h2>
-<p>Safe Pulse includes an optional disguise feature that makes the app appear as another app on your device. The secret code for this feature is stored only on your device and is never transmitted to our servers. We have no way to recover your secret code if lost.</p>
+  <div class="section">
+    <h2><span class="section-number">6</span> Location Data</h2>
+    <p>Location data is at the heart of what Safe Path does, and we handle it with great care:</p>
+    <ul>
+      <li>Location is only captured when you consciously enable tracking within the app</li>
+      <li>Your location is visible exclusively to family members you have personally invited and accepted</li>
+      <li>Location history is automatically deleted after <strong>24 hours</strong> for free plan users</li>
+      <li>Premium subscribers retain up to <strong>30 days</strong> of location history before automatic deletion</li>
+      <li>You may stop tracking at any time directly from the app</li>
+      <li>No individual or organisation outside your approved family group has access to your location</li>
+    </ul>
+  </div>
 
-<h2>12. Third Party Services</h2>
-<ul>
-  <li><strong>Google Firebase</strong> — data storage, authentication: <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a></li>
-  <li><strong>Google Maps</strong> — map display: <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-  <li><strong>Paystack</strong> — payment processing: <a href="https://paystack.com/privacy">Paystack Privacy Policy</a></li>
-</ul>
+  <div class="section">
+    <h2><span class="section-number">7</span> Data Sharing</h2>
+    <p>We do not sell, rent or trade your personal data under any circumstances. There are limited situations in which your data may be shared, all of which are necessary for the app to function:</p>
+    <ul>
+      <li><strong>Your family group</strong> — location data is shared only with members you have explicitly invited and accepted</li>
+      <li><strong>Google Firebase</strong> — used to store and manage app data securely</li>
+      <li><strong>Paystack</strong> — processes subscription payments and manages all related financial data independently</li>
+      <li><strong>Legal requirements</strong> — we may disclose information if compelled by Nigerian law or a valid legal order</li>
+    </ul>
+  </div>
 
-<h2>13. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the date at the top of this policy. Continued use of the app after changes constitutes acceptance of the new policy.</p>
+  <div class="section">
+    <h2><span class="section-number">8</span> Data Retention</h2>
+    <ul>
+      <li><strong>Free plan users</strong> — location history automatically deleted every 24 hours</li>
+      <li><strong>Premium subscribers</strong> — location history retained for up to 30 days before automatic deletion</li>
+      <li><strong>Account data</strong> — retained for as long as your account remains active</li>
+      <li><strong>After account deletion</strong> — data removed from our systems immediately. Residual backup copies may take up to 7 days to be fully purged</li>
+    </ul>
+  </div>
 
-<h2>14. Contact Us</h2>
-<p><strong>Njeze Technologies</strong><br>
-Email: <a href="mailto:safepath@gmail.com">safepath@gmail.com</a><br>
-Country: Nigeria</p>
+  <div class="section">
+    <h2><span class="section-number">9</span> Data Security</h2>
+    <p>Protecting your data is a responsibility we take seriously. All data is stored on Google Firebase, which enforces strict access control rules ensuring that no user can view another user's data without explicit permission. Payment information is managed entirely by Paystack and never passes through our systems. Your disguise secret code exists only on your personal device and is inaccessible to us.</p>
+    <div class="highlight-box">
+      We must be honest: no digital system is completely immune to risk. While we have implemented strong safeguards, we cannot provide an absolute guarantee of security.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-number">10</span> Your Rights Under the NDPA 2023</h2>
+    <p>As a user in Nigeria, the Nigeria Data Protection Act grants you the following rights:</p>
+    <ul>
+      <li><strong>Right to access</strong> — request a copy of the personal data we hold about you</li>
+      <li><strong>Right to correction</strong> — request corrections to any inaccurate information</li>
+      <li><strong>Right to deletion</strong> — delete your account within the app or contact us at safepath@gmail.com and we will action your request within 7 days</li>
+      <li><strong>Right to withdraw consent</strong> — stop location tracking at any time by disabling it within the app</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-number">11</span> The Disguise Feature</h2>
+    <p>Safe Path offers an optional disguise feature that allows the app to appear as a different, ordinary application on your device. This feature exists purely for personal safety purposes. The secret code that activates this feature is stored locally on your device only and is never sent to our servers.</p>
+    <div class="highlight-box">
+      We strongly advise users to remember their disguise code. We have no mechanism to retrieve or reset it on your behalf.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-number">12</span> Third Party Services</h2>
+    <ul>
+      <li><strong>Google Firebase</strong> — data storage and authentication. Privacy policy at <a href="https://firebase.google.com/support/privacy" style="color:#00B050;">firebase.google.com/support/privacy</a></li>
+      <li><strong>Google Maps</strong> — in-app mapping features. Privacy policy at <a href="https://policies.google.com/privacy" style="color:#00B050;">policies.google.com/privacy</a></li>
+      <li><strong>Paystack</strong> — subscription payment processing. Privacy policy at <a href="https://paystack.com/privacy" style="color:#00B050;">paystack.com/privacy</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-number">13</span> Updates to This Policy</h2>
+    <p>We reserve the right to update this Privacy Policy as the app evolves. Any significant changes will be reflected in the updated date shown at the top of this document. Continued use of Safe Path following an update constitutes your acceptance of the revised policy.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>Contact Us</h2>
+    <p>For any questions, concerns or requests relating to this Privacy Policy, we are happy to hear from you.</p>
+    <a href="mailto:safepath@gmail.com">safepath@gmail.com</a>
+    <p style="margin-top:16px; font-size:13px; opacity:0.8;">Njeze Technologies · Nigeria</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 <span>Njeze Technologies</span>. All rights reserved. · Safe Path Privacy Policy</p>
+</footer>
 
 </body>
 </html>
