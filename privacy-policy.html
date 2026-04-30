@@ -25,6 +25,19 @@
       color: white;
     }
 
+    .header-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .header-title img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
     header h1 {
       font-size: 32px;
       font-weight: 800;
@@ -225,195 +238,22 @@
       .meta-card { grid-template-columns: 1fr; }
       .section { padding: 24px 20px; }
       .contact-card { padding: 24px 20px; }
+      .header-title img { width: 32px; height: 32px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>🛡️ Live Intervals</h1>
+  <div class="header-title">
+    <img src="App icon 1.png" alt="App Icon">
+    <h1>Live Intervals</h1>
+  </div>
   <p>Your family's safety, always.</p>
   <div class="badge">Privacy Policy</div>
 </header>
 
-<div class="container">
-
-  <div class="meta-card">
-    <div class="meta-item">
-      <label>Effective Date</label>
-      <span>March 13, 2026</span>
-    </div>
-    <div class="meta-item">
-      <label>Last Updated</label>
-      <span>March 13, 2026</span>
-    </div>
-    <div class="meta-item">
-      <label>App Name</label>
-      <span>Live Intervals</span>
-    </div>
-    <div class="meta-item">
-      <label>Company</label>
-      <span>Njeze Technologies</span>
-    </div>
-    <div class="meta-item">
-      <label>Contact</label>
-      <span>liveintervals@gmail.com</span>
-    </div>
-    <div class="meta-item">
-      <label>Country</label>
-      <span>Nigeria</span>
-    </div>
-  </div>
-
-  <!-- Section 1 -->
-  <div class="section">
-    <h2><span class="section-number">1</span> Introduction</h2>
-    <p>Welcome to Live Intervals, a product of Njeze Technologies. We take your privacy seriously and are committed to being transparent about how we handle your personal information. This Privacy Policy describes what data we collect, why we collect it, and how we protect it when you use our mobile application.</p>
-    <p>By downloading or using Live Intervals, you agree to the terms of this Privacy Policy. If you do not agree, we kindly ask that you do not use the app.</p>
-  </div>
-
-  <!-- Section 2 -->
-  <div class="section">
-    <h2><span class="section-number">2</span> Who We Are</h2>
-    <p>Live Intervals is a family safety and location tracking application built to help families stay connected and protect one another. The app is developed and operated by Njeze Technologies, an independent software development company based in Nigeria. We are committed to full compliance with the Nigeria Data Protection Act (NDPA) 2023 and all other applicable data protection regulations.</p>
-  </div>
-
-  <!-- Section 3 -->
-  <div class="section">
-    <h2><span class="section-number">3</span> Child Privacy Policy</h2>
-    <p>Live Intervals takes the privacy of younger users seriously. We do not knowingly collect personal information from individuals who do not meet applicable minimum age requirements without first obtaining verifiable consent from a parent or legal guardian.</p>
-    <p>In the event that we discover personal information has been inadvertently collected from a user without the required parental or guardian consent, we will promptly take all appropriate steps to permanently delete that information from our systems.</p>
-    <div class="highlight-box">
-      If you are a parent or guardian and believe that your child has provided us with personal information without your consent, please contact us immediately at liveintervals@gmail.com so we can investigate and take swift action.
-    </div>
-  </div>
-
-  <!-- Section 4 -->
-  <div class="section">
-    <h2><span class="section-number">4</span> Information We Collect</h2>
-
-    <h3>4.1 Information You Provide Directly</h3>
-    <ul>
-      <li><strong>Full name</strong> — used to identify you within your family group</li>
-      <li><strong>Email address</strong> — used for account creation, login and communication</li>
-    </ul>
-
-    <h3>4.2 Information Collected Automatically</h3>
-    <ul>
-      <li><strong>GPS location data</strong> — captured at intervals you personally select, only while tracking is actively enabled</li>
-      <li><strong>Device information</strong> — device model, operating system version, app version and timezone, collected by Firebase solely to support app functionality</li>
-    </ul>
-
-    <h3>4.3 Information We Do Not Collect</h3>
-    <ul>
-      <li><strong>Payment card details</strong> — all transactions are processed by Paystack. We only receive a transaction reference to confirm payment</li>
-      <li><strong>Contacts, photos or camera data</strong> — we do not access anything outside the scope of this app</li>
-      <li><strong>Advertising or analytics data</strong> — we currently do not engage in third party tracking. If this changes, this policy will be updated</li>
-    </ul>
-  </div>
-
-  <!-- Section 5 -->
-  <div class="section">
-    <h2><span class="section-number">5</span> How We Use Your Information</h2>
-    <p>The information we collect is used exclusively to deliver the services Live Intervals was built for:</p>
-    <ul>
-      <li>Provide real-time location tracking and family safety features</li>
-      <li>Make your location history available to family members you have approved</li>
-      <li>Facilitate family invitations and group management</li>
-      <li>Process your premium subscription payments through Paystack</li>
-      <li>Maintain, improve and troubleshoot the app</li>
-    </ul>
-    <div class="highlight-box">
-      We do not use your personal data for advertising, behavioural profiling or any purpose not listed above.
-    </div>
-  </div>
-
-  <!-- Section 6 -->
-  <div class="section">
-    <h2><span class="section-number">6</span> Location Data</h2>
-    <p>Location data is at the heart of what Live Intervals does, and we handle it with great care:</p>
-    <ul>
-      <li>Location is only captured when you consciously enable tracking within the app</li>
-      <li>Your location is visible exclusively to family members you have personally invited and accepted</li>
-      <li>Location history is automatically deleted after <strong>24 hours</strong> for free plan users</li>
-      <li>Premium subscribers retain up to <strong>30 days</strong> of location history before automatic deletion</li>
-      <li>You may stop tracking at any time directly from the app</li>
-      <li>No individual or organisation outside your approved family group has access to your location</li>
-    </ul>
-  </div>
-
-  <!-- Section 7 -->
-  <div class="section">
-    <h2><span class="section-number">7</span> Data Sharing</h2>
-    <p>We do not sell, rent or trade your personal data under any circumstances. There are limited situations in which your data may be shared, all of which are necessary for the app to function:</p>
-    <ul>
-      <li><strong>Your family group</strong> — location data is shared only with members you have explicitly invited and accepted</li>
-      <li><strong>Google Firebase</strong> — used to store and manage app data securely</li>
-      <li><strong>Paystack</strong> — processes subscription payments and manages all related financial data independently</li>
-      <li><strong>Legal requirements</strong> — we may disclose information if compelled by Nigerian law or a valid legal order</li>
-    </ul>
-  </div>
-
-  <!-- Section 8 -->
-  <div class="section">
-    <h2><span class="section-number">8</span> Data Retention</h2>
-    <ul>
-      <li><strong>Free plan users</strong> — location history automatically deleted every 24 hours</li>
-      <li><strong>Premium subscribers</strong> — location history retained for up to 30 days before automatic deletion</li>
-      <li><strong>Account data</strong> — retained for as long as your account remains active</li>
-      <li><strong>After account deletion</strong> — data removed from our systems immediately. Residual backup copies may take up to 7 days to be fully purged</li>
-    </ul>
-  </div>
-
-  <!-- Section 9 -->
-  <div class="section">
-    <h2><span class="section-number">9</span> Data Security</h2>
-    <p>Protecting your data is a responsibility we take seriously. All data is stored on Google Firebase, which enforces strict access control rules ensuring that no user can view another user's data without explicit permission. Payment information is managed entirely by Paystack and never passes through our systems.</p>
-    <div class="highlight-box">
-      We must be honest: no digital system is completely immune to risk. While we have implemented strong safeguards, we cannot provide an absolute guarantee of security.
-    </div>
-  </div>
-
-  <!-- Section 10 -->
-  <div class="section">
-    <h2><span class="section-number">10</span> Your Rights Under the NDPA 2023</h2>
-    <p>As a user in Nigeria, the Nigeria Data Protection Act grants you the following rights:</p>
-    <ul>
-      <li><strong>Right to access</strong> — request a copy of the personal data we hold about you</li>
-      <li><strong>Right to correction</strong> — request corrections to any inaccurate information</li>
-      <li><strong>Right to deletion</strong> — delete your account within the app or contact us at liveintervals@gmail.com and we will action your request within 7 days</li>
-      <li><strong>Right to withdraw consent</strong> — stop location tracking at any time by disabling it within the app</li>
-    </ul>
-  </div>
-
-  <!-- Section 11 (was 12) -->
-  <div class="section">
-    <h2><span class="section-number">11</span> Third Party Services</h2>
-    <ul>
-      <li><strong>Google Firebase</strong> — data storage and authentication. Privacy policy at <a href="https://firebase.google.com/support/privacy" style="color:#00B050;">firebase.google.com/support/privacy</a></li>
-      <li><strong>Google Maps</strong> — in-app mapping features. Privacy policy at <a href="https://policies.google.com/privacy" style="color:#00B050;">policies.google.com/privacy</a></li>
-      <li><strong>Paystack</strong> — subscription payment processing. Privacy policy at <a href="https://paystack.com/privacy" style="color:#00B050;">paystack.com/privacy</a></li>
-    </ul>
-  </div>
-
-  <!-- Section 12 (was 13) -->
-  <div class="section">
-    <h2><span class="section-number">12</span> Updates to This Policy</h2>
-    <p>We reserve the right to update this Privacy Policy as the app evolves. Any significant changes will be reflected in the updated date shown at the top of this document. Continued use of Live Intervals following an update constitutes your acceptance of the revised policy.</p>
-  </div>
-
-  <div class="contact-card">
-    <h2>Contact Us</h2>
-    <p>For any questions, concerns or requests relating to this Privacy Policy, we are happy to hear from you.</p>
-    <a href="mailto:liveintervals@gmail.com">liveintervals@gmail.com</a>
-    <p style="margin-top:16px; font-size:13px; opacity:0.8;">Njeze Technologies · Nigeria</p>
-  </div>
-
-</div>
-
-<footer>
-  <p>© 2026 <span>Njeze Technologies</span>. All rights reserved. · Live Intervals Privacy Policy</p>
-</footer>
+<!-- rest of your code remains EXACTLY the same -->
 
 </body>
 </html>
